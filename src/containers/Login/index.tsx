@@ -1,11 +1,14 @@
 import React from "react";
+import LoginForm  from '../../components/forms/LoginForm';
+import { Form} from 'antd';
 
-interface Props {
-  name: string;
-}
-
-const Login = ({ name }: Props) => {
-  return <div className="App">Login page {name}</div>;
+const Login = () => {
+  const LoginFormWrap = Form.create({ name: 'login_form' })(LoginForm);
+  return (
+    <div className="login-wrapper">
+      <LoginFormWrap/>
+    </div>
+  )
 };
 
 export default Login;
